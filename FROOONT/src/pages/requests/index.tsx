@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { IRequest } from "../../helpers/types"
+import { IRequest, IUser } from "../../helpers/types"
 import { handleRequests } from "../../helpers/api"
 import { useParams } from "react-router-dom"
 
@@ -11,10 +11,10 @@ export const Requests = () => {
         if(id) {
         handleRequests(Number(id))
         .then(response => {
-            setRequests(response.payload)
+            
         })
         }
-    }, [id])
+    }, [])
 
 
     return<>

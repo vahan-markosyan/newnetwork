@@ -45,6 +45,7 @@ export interface IPost {
   title: string;
   picture: string;
   likes: IUser[];
+  isLiked:boolean
 }
 
 export interface IChange {

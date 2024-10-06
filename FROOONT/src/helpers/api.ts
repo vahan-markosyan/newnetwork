@@ -102,3 +102,13 @@ export const handleRequests = async(id:number): Promise<IResponse> => {
   const response = await Axios.get("/requests"+ id) 
   return response.data
 }
+
+export const handlePostReaction = async(id:number): Promise<IResponse> => {
+  const response = await Axios.post("/posts/react/" + id)
+  return response.data
+}
+
+export const handleBlock = async(id:number): Promise<IResponse> => {
+  const response = await Axios.post("/block/" + id)
+  return response.data
+}
